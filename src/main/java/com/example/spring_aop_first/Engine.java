@@ -1,5 +1,6 @@
 package com.example.spring_aop_first;
 
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
@@ -20,8 +21,8 @@ public class Engine {
     }
 
     @After("crashPointCut()")
-    public void stop() {
-        System.out.println("Engine stopped...");
+    public void stop(JoinPoint joinPoint) {
+        System.out.println("Engine stopped... " + joinPoint.getTarget().getClass().getSimpleName());
     }
 
 
