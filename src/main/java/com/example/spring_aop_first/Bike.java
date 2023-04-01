@@ -8,4 +8,8 @@ public class Bike {
     public void vroom() {
         System.out.println("vroom!!");
     }
+
+    public void crash() {
+        System.out.println("crashed :(");
+    }
 }

@@ -22,6 +22,8 @@ public class SpringAopFirstApplication {
 
         Bike bike = appContext.getBean("Bike", Bike.class);
         bike.vroom();
+        bike.crash();
+        System.out.println("---------------------------------------\n");
 
 
         Car car = appContext.getBean("Car", Car.class);
